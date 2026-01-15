@@ -24,7 +24,7 @@ const App = () => {
   }
 
   const handleGoalAdd = (goal: Goal) => {
-    setGoals((prevGoals) => [...prevGoals, goal])
+    setGoals((prevGoals) => [goal, ...prevGoals])
   }
 
   return (
