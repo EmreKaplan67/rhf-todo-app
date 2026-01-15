@@ -1,0 +1,34 @@
+export type Goal = {
+    id: number;
+    title: string;
+    description: string;
+}
+
+interface CourseGoalsProps {
+    goals: Goal[]
+    onDelete: (id: number) => void
+}
+
+const CourseGoals = ({goals, onDelete}: CourseGoalsProps) => {
+  if (goals.length === 0) {
+    return <p className="no-goals">No goals yet. Start by adding your first goal!</p>
+  }
+
+  return (
+    <ul>
+        {goals.map(goal => (
+            <li key={goal.id}>
+                <article>
+                    <div>
+                        <h2>{goal.title}</h2>
+                        <p>{goal.description}</p>
+                    </div>
+                    <button onClick={() => onDelete(goal.id)}>Delete</button>
+                </article>
+            </li>
+        ))}
+    </ul>
+  )
+}
+
+export default CourseGoals

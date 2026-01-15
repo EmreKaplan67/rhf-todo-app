@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#f0f6f8, #e0e1e7);
+}
+
+main {
+  width: 90%;
+  max-width: 80rem;
+  height: calc(100vh - 6rem);
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #3a4346;
+  color: #f0f6f8;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #f7e596;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #dfd9be;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #b4b6c4;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #f7e596;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: bold;
+  color: #3a4346;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #f9e175;
+}
+
+form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form button:disabled:hover {
+  background-color: #f7e596;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+li {
+  background-color: #475357;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+li article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+li h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #b1c1c3;
+}
+
+li p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #dfd9be;
+}
+
+li button {
+  font: inherit;
+  padding: 0 0.5rem;
+  background: transparent;
+  border: none;
+  color: #909a9a;
+  cursor: pointer;
+}
+
+li button:hover {
+  color: #f9a73b;
+}
+
+p .errorMsg {
+    color: red;
+}
+
+p .charCount {
+    font-size: small;
+}
+
+.no-goals {
+  text-align: center;
+  color: #dfd9be;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background-color: #475357;
+  border-radius: 4px;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    height: calc(100vh - 3rem);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  ul {
+    max-height: 50vh;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  header {
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .content-grid {
+    gap: 1rem;
+    margin-top: 1rem;
+    overflow: visible;
+    height: auto;
+  }
+
+  label {
+    font-size: 0.75rem;
+  }
+
+  input {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  form button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 0.75rem;
+  }
+
+  li h2 {
+    font-size: 1rem;
+  }
+
+  li p {
+    font-size: 0.75rem;
+  }
+
+  li button {
+    font-size: 0.85rem;
+  }
+
+  .no-goals {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  p .charCount {
+    font-size: 0.7rem;
+  }
+
+  ul {
+    padding-right: 0.25rem;
+    height: auto;
+    overflow-y: visible;
+  }
+}
